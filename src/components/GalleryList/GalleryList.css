@@ -1,4 +1,7 @@
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    background: rgb(186, 183, 155);
+
 }
+ 

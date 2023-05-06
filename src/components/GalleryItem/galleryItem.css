@@ -1,5 +1,11 @@
 #flexButt {
-    background-color: white;
+    background-color: rgb(204, 205, 199);
   color: black;
   border: 2px solid #140775;
+}
+
+#likes {
+    color: rgb(159, 226, 43);
+    background: rgb(9,118,121);
+    background: linear-gradient(90deg, rgba(9,118,121,1) 45%, rgba(5,177,162,1) 69%, rgba(2,179,234,1) 89%, rgba(1,192,242,1) 93%, rgba(0,212,255,1) 97%);
 }

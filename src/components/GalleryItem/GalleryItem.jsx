@@ -33,7 +33,7 @@ function GalleryItem(props) {
       <button onClick={() => {handleLike(props.id)}}>🫶🏽</button>
       </div>
 
-      <p>{props.likes} people 🫶🏽 this</p>
+      <p id="likes">{props.likes} people 🫶🏽 this</p>
       </ul>
     );
   }
