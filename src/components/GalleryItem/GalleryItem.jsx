@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import './galleryItem.css';
 import axios from 'axios';
+import './GalleryItem.css'
 
 function GalleryItem(props) {
-    const [showDescription, setShowDescription] = useState(false);
+    const [showDescription, setShowDescription] = useState(true);
     const [isFlipped, setIsFlipped] = useState(false);
 
     const handleFlip = () => {
@@ -16,7 +16,7 @@ function GalleryItem(props) {
       method: 'PUT',
       url: `/gallery/like/${id}`
       }).then((response) => {
-            props.handleLike(id, response.data.likes);
+          console.log("Here's the response from handleLike PUT in Item:", response);
           }).catch((error) => {
             console.log('Error updating likes', error);
           });
@@ -24,15 +24,16 @@ function GalleryItem(props) {
 
     return (
       <ul>
-       {showDescription ? (
-        <p>{props.description}</p>
-        ) : (
-      <img src={props.path} 
+       {showDescription ? <img src={props.path} 
       alt={props.description} 
-      onClick={handleFlip} />
-     )}
+      onClick={handleFlip} /> : 
+        <p>{props.description}</p>
+    }
+      <div id="flexButt">
       <button onClick={() => {handleLike(props.id)}}>🫶🏽</button>
-      <p>{props.likes} likes</p>
+      </div>
+
+      <p>{props.likes} people 🫶🏽 this</p>
       </ul>
     );
   }

@@ -1,14 +1,12 @@
 import GalleryItem from '../GalleryItem/GalleryItem';
+import './GalleryList.css'
 
 function GalleryList(props) {
-    // const [galleryItems, setGalleryItems] = useState(props.galleryItems.map(item => ({ id:item.id, path:item.path, description:item.description, likes:item.likes, showDescription:false })));
-
-
-
+  
     return (
      <div className="gallery">
        {props.galleryItems.map((item) => (
-        <GalleryItem key={item.id} 
+        <GalleryItem 
         id={item.id} 
         path={item.path} 
         description={item.description} 
